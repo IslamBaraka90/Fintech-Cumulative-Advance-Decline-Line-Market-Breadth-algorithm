@@ -1,0 +1,30 @@
+# Provenance for the publishing tool — links this standalone repo back to the
+# source topic package in the edufintech monorepo.
+repo_slug: "Fintech-Cumulative-Advance-Decline-Line-Market-Breadth-algorithm"
+github: "IslamBaraka90/Fintech-Cumulative-Advance-Decline-Line-Market-Breadth-algorithm"
+visibility: "public"
+
+derives_from:
+  topic_id: "D04-F01-A03"
+  title: "Cumulative Advance/Decline Line: Recompute History Without Looking Ahead"
+  domain_id: "D04"
+  domain: "Market Breadth and Internals"
+  family_id: "D04-F01"
+  family: "Advance/Decline Breadth"
+  source_path: "algorithms/domains/D04-market-breadth-and-internals/D04-F01-advance-decline-breadth/D04-F01-A03-cumulative-advance-decline-line"
+
+article_url: "https://thefintechbuilder.com/market-breadth-and-internals/advance-decline-breadth/cumulative-advance-decline-line/"
+
+languages: ["python", "typescript"]
+
+# Split model: reader keeps the teaching snippet; this repo owns the production
+# calculator plus the PROPAGATION surface (correction_impact, diff_lines,
+# rebase_line, line_deltas) — the "beyond tutorial" extra, chosen because the
+# running sum means one restated session offsets every later value, and telling a
+# restatement apart from a market move is the operational problem the tutorial
+# has no room for.
+# Note: no streaming engine (the line is already an incremental fold, and the
+# interesting axis is revision history, not tick arrival). No Yahoo path: breadth
+# needs a full point-in-time universe with per-issue eligibility states, which
+# Yahoo does not expose.
+model: "split"
