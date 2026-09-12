@@ -6,7 +6,6 @@ build-backend = "setuptools.build_meta"
 name = "fintech-cumulative-ad-line"
 version = "0.1.0"
 description = "Causal, revision-aware Cumulative Advance/Decline Line with correction-propagation analysis."
-readme = "../README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "The Fintech Builder" }]
