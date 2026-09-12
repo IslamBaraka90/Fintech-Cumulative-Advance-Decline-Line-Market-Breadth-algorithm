@@ -2,20 +2,41 @@
   "name": "fintech-cumulative-ad-line",
   "version": "0.1.0",
   "description": "Causal, revision-aware Cumulative Advance/Decline Line with correction-propagation analysis.",
-  "keywords": ["fintech", "cumulative-advance-decline-line", "market-breadth", "advance-decline", "point-in-time", "event-sourcing"],
+  "keywords": [
+    "fintech",
+    "cumulative-advance-decline-line",
+    "market-breadth",
+    "advance-decline",
+    "point-in-time",
+    "event-sourcing"
+  ],
   "homepage": "https://github.com/IslamBaraka90/Fintech-Cumulative-Advance-Decline-Line-Market-Breadth-algorithm",
   "license": "MIT",
   "author": "The Fintech Builder",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20" },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "node --experimental-strip-types --test \"test/*.test.ts\"",
     "example": "node --experimental-strip-types examples/quickstart.ts"
   },
-  "devDependencies": { "typescript": "^5.7.0" }
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
 }
